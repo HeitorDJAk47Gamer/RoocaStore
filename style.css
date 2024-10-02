@@ -1,5 +1,6 @@
 html {
 	margin: 0;
+    transition: 1s;
 }
 
 body {
@@ -32,3 +33,29 @@ img.hh {
     margin: 0 auto; /* margens automáticas para centralizar */
     text-align: center; /* centraliza o texto dentro da div */
 }
+
+  
+  @keyframes saturate {
+    0%  { filter: saturate(0%); }
+    100% { filter: saturate(100%); }
+  }
+  
+  img.icone {
+    width: 10vw;
+    filter: saturate(0%);
+    transition: filter 1s; /* Adicione esta linha para a transição suave */
+  }
+  
+  img.icone:hover {
+    animation-fill-mode: forwards;
+    filter: saturate(100%);
+  }
+  
+  #git {
+    filter: invert(20%);
+  }
+  
+  #git:hover {
+    filter: invert(0%);
+    animation-fill-mode: forwards;
+  }
