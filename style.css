@@ -34,28 +34,39 @@ img.hh {
     text-align: center; /* centraliza o texto dentro da div */
 }
 
-  
-  @keyframes saturate {
-    0%  { filter: saturate(0%); }
-    100% { filter: saturate(100%); }
-  }
-  
-  img.icone {
+
+@keyframes saturate {
+0%  { filter: saturate(0%); }
+100% { filter: saturate(100%); }
+}
+
+img.icone {
+filter: saturate(0%);
+transition: filter 1s; /* Adicione esta linha para a transição suave */
+}
+
+img.icone:hover {
+animation-fill-mode: forwards;
+filter: saturate(100%);
+}
+
+#git {
+filter: invert(20%);
+}
+
+#git:hover {
+filter: invert(0%);
+animation-fill-mode: forwards;
+}
+
+@media only screen and (min-width: 768px) {
+img.icone {
+    width: 6vw;
+}
+}
+
+@media only screen and (max-width: 768px) {
+img.icone {
     width: 10vw;
-    filter: saturate(0%);
-    transition: filter 1s; /* Adicione esta linha para a transição suave */
-  }
-  
-  img.icone:hover {
-    animation-fill-mode: forwards;
-    filter: saturate(100%);
-  }
-  
-  #git {
-    filter: invert(20%);
-  }
-  
-  #git:hover {
-    filter: invert(0%);
-    animation-fill-mode: forwards;
-  }
+}
+}
