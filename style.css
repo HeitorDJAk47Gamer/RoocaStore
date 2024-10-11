@@ -73,9 +73,9 @@ img.icone {
 
 #menu {
 	background: #0099CC;
-	background: linear-gradient(to bottom,  #1F2225,  #FEB6E3);
+	background: linear-gradient(to bottom,  #FEB6E3,  #1F2225);
 	height: 45px;
-	border-radius: 10px;
+	border-radius: 0px;
 }
 #menu ul, #menu li {
 	margin: 0 auto;
